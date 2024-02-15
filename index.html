@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Counter</title>
+    <script>
+        let clickCount = 0;
+
+        function countClicks() {
+            clickCount++;
+            document.getElementById('clickCountDisplay').innerText = 'Click Count: ' + clickCount;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="countClicks()">Click Me</button>
+    <p id="clickCountDisplay">Click Count: 0</p>
+</body>
+</html>
