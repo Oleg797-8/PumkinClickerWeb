@@ -1,29 +1,68 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>PumpkinClicker</title>
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* Меняем направление колонку */
+            height: 100vh;
+        }
+
+        .image_for_button_pumpkin {
+            margin-top: 20px;
+            margin-right: 50px;
+        }
+
+        .button_without_background {
+            background: none;
+            /* убираем фон */
+            border: none;
+            /* убираем границу */
+            padding: 0;
+            /* убираем отступы внутри кнопки */
+        }
+    </style>
 </head>
+
 <body>
-    <button onclick="countClicks()" class="img_button">
-        <img src="img/9c1f835c4d739c64f1ad38d95b54-tra.png">
-    </button>
-    <p id="clickCountDisplay">0</p>
-</body>
-</html>
-<script>
+    <div class="center">
+        <button id="clickButton" onclick="countClicks()" class="button_without_background">
+            <img src="img/9c1f835c4d739c64f1ad38d95b54-tra.png" class="image_for_button_pumpkin">
+        </button>
+        <div id="clickCountDisplay">0</div> <!-- Перемещаем внешний див ниже кнопки -->
+        <div class="initialClicksPerSecondDisplay">1000/1000</div>
+    </div>
+    <script>
         let clickCount = 0;
+        let clickCountDisplay = document.getElementById("clickCountDisplay");
+        let clicksPerSecondDisplay = document.getElementById("clicksPerSecondDisplay");
+        let initialClicksPerSecondDisplay = document.querySelector('.initialClicksPerSecondDisplay');
+
+        let initialClicks = 1000;
 
         function countClicks() {
             clickCount++;
-            document.getElementById('clickCountDisplay').innerText =clickCount;
+            clickCountDisplay.innerText = clickCount;
         }
-</script>
-<style>
-    .img_button{
-    background: none; /* убираем фон */
-    border: none; /* убираем границу */
-    padding: 0; /* убираем отступы внутри кнопки */
-    margin-top: 50vh;
-    margin-left: 85vh;
-    }
-</style>
+
+        setInterval(function () {
+            if (initialClicks > 0) {
+                initialClicks -= 1;
+                initialClicksPerSecondDisplay.innerText = initialClicks + "/1000";
+            }
+        }, 2000);
+
+        setInterval(function () {
+            clicksPerSecondDisplay.innerText = clickCount;
+            clickCount = 0;
+        }, 1000);
+
+    </script>
+</body>
+
+</html>
