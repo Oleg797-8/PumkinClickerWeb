@@ -2,19 +2,26 @@
 <html>
 <head>
     <title>PumpkinClicker</title>
-    <script>
+</head>
+<body>
+    <button onclick="countClicks()" class="img_button">
+        <img src="img/9c1f835c4d739c64f1ad38d95b54-tra.png">
+    </button>
+    <p id="clickCountDisplay">0</p>
+</body>
+</html>
+<script>
         let clickCount = 0;
 
         function countClicks() {
             clickCount++;
-            document.getElementById('clickCountDisplay').innerText = 'Click Count: ' + clickCount;
+            document.getElementById('clickCountDisplay').innerText =clickCount;
         }
-    </script>
-</head>
-<body>
-    <button onclick="countClicks()">
-        <img src="img/9c1f835c4d739c64f1ad38d95b54-tra.png">
-    </button>
-    <p id="clickCountDisplay">Click Count: 0</p>
-</body>
-</html>
+</script>
+<style>
+    .img_button{
+    background: none; /* убираем фон */
+    border: none; /* убираем границу */
+    padding: 0; /* убираем отступы внутри кнопки */
+    }
+</style>
