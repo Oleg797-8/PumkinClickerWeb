@@ -10,10 +10,17 @@
         overflow: hidden;
         outline: none;
     }
-    .position_pumpkin{
-        justify-content: center;
-        margin-top: 250px;
+    .position_clicker{
+        margin-top: 280px;
+        margin-left: 230px;
     }
-    .clicks{
-        margin-left: 270px;
+    .style_for_pumpkin{
+        width: 100px;
+        height: 100%;
+    }
+    .count_clicks{
+        margin-left: 20px;
+        color: white;
+        border: 10px;
+        border-color: black;
     }
