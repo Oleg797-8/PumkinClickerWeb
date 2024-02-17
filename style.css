@@ -11,8 +11,8 @@
         outline: none;
     }
     .position_clicker{
-        margin-top: 280px;
-        margin-left: 230px;
+        margin-top: 140px;
+        margin-left: 115px;
     }
     .style_for_pumpkin{
         width: 100px;
@@ -20,7 +20,6 @@
     }
     .count_clicks{
         margin-left: 20px;
-        color: white;
-        border: 10px;
+        border-radius: 10px;
         border-color: black;
     }
