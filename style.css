@@ -1,0 +1,19 @@
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    button {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+    }
+    .position_pumpkin{
+        justify-content: center;
+        margin-top: 250px;
+    }
+    .clicks{
+        margin-left: 270px;
+    }
